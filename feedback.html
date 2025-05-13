@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feedback | SpeakCoach</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">SpeakCoach</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="practice.html">Practice</a></li>
+        <li><a href="assess.html">Assessment</a></li>
+        <li><a href="tips.html">Tips & Training</a></li>
+        <li><a href="feedback.html" class="active">Feedback</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <h2>We’d love your feedback!</h2>
+    <p>Help us improve by rating your experience with SpeakCoach.</p>
+
+    <form id="feedback-form" class="feedback-form">
+      <label for="rating">Rate your experience:</label>
+      <div class="stars">
+        <input type="radio" name="star" id="star5" value="5"><label for="star5">★</label>
+        <input type="radio" name="star" id="star4" value="4"><label for="star4">★</label>
+        <input type="radio" name="star" id="star3" value="3"><label for="star3">★</label>
+        <input type="radio" name="star" id="star2" value="2"><label for="star2">★</label>
+        <input type="radio" name="star" id="star1" value="1"><label for="star1">★</label>
+      </div>
+
+      <label for="comments">Your comments:</label>
+      <textarea id="comments" rows="5" placeholder="Share your thoughts..."></textarea>
+
+      <button type="submit" class="btn-primary">Submit Feedback</button>
+      <p id="feedback-response" class="feedback-response"></p>
+    </form>
+  </main>
+
+  <footer>
+            <p> SpeakCoach - Venkata Harshini Devarapalli</p>
+  </footer>
+
+  <script>
+    document.getElementById("feedback-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("feedback-response").innerText = "✅ Thank you! Your feedback has been received.";
+    });
+  </script>
+</body>
+</html>
